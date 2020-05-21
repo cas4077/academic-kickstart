@@ -18,12 +18,15 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include traumatic brain injury, cognitive assessments and statistical programming in R.
+bio: My research interests include psychometrics, cognitive assessments and statistical programming in R.
 
 interests:
-- Traumatic Brain Injury
+- Psychometrics
+- Measurement
+- Data Analysis
 - Statistics
 - Programming
+- Traumatic Brain Injury
 
 education:
   courses:
