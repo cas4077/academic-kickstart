@@ -90,7 +90,7 @@ address = {street = "Brain and Mind Institute, Western Interdisciplinary Researc
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "48.012202", longitude = "-81.270955"}
+coordinates = {latitude = "43.011508", longitude = "-81.270944"}
 
 # Directions for visitors to locate you.
 directions = ""
