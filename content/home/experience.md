@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
-title = "Experience"
+title = "Work Experience"
 subtitle = ""
 
 # Date format for experience
@@ -17,28 +17,36 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Graduate Trainee"
+  company = "Western University"
+  company_url = "https://owenlab.uwo.ca/"
+  location = "London, Ontario, Canada"
+  date_start = "2015-09-01"
   date_end = ""
   description = """
   Responsibilities include:
-  
-  * Analysing
+
+  * Study design
   * Modelling
-  * Deploying
+  * Manuscript writing
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Junior Social Sciences Research Analyst"
+  company = "Human Resource Systems Group Ltd."
+  company_url = "https://www.hrsg.ca/"
+  location = "Remote contract work"
+  date_start = "2018-03-01"
+  date_end = ""
+  description = """
+  Responsibilities include:
+
+  * Provide research services by undertaking literature and database reviews.
+  * Analyzes quantitative and qualitative data from surveys, focus groups, and interviews
+  * Write technical reports, translating academic and technical terminology for a general audience
+  """
+
 
 +++

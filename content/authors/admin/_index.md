@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Clara A. Stafford
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,32 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: PhD Student
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: University of Western Ontario
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include traumatic brain injury, cognitive assessments and statistical programming in R.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Traumatic Brain Injury
+- Statistics
+- Programming
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Psychology
+    institution: Western University
+    year: 2021
+  - course: MSc in Psychology
+    institution: Western University
+    year: 2017
+  - course: BA in Psychology
+    institution: McGill University
+    year: 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,16 +44,19 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/cas4077
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.ca/citations?user=5X-G6z8AAAAJ&hl=en
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/cas4077
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/clara-alexandra-stafford-04176866/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -61,7 +64,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "cstaffo2@uwo.ca"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,6 +73,6 @@ user_groups:
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Clara  Stafford is a graduate trainee in the Brain and Mind Institute at Western University, under the supervision of [Dr. Adrian Owen](https://owenlab.uwo.ca/). Her research interests include traumatic brain injuries and understanding the long-term biopsychosocial impacts related to concussion. She is currently undertaking her 3rd year in her PhD program.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Clara completed her undergraduate thesis in 2015, under the supervision of Dr. Michael Petrides at the world-renowned Montreal Neurological Institute. She subsequently joined Dr. Owen's lab as a research assistant before beginning her graduate studies at Western University. Her Master's thesis investigated the structural neural correlates of cognitive-motor dissociation in patients with prolonged disorders of consciousness. She began her PhD in September 2017, and switched her research focus to understanding the long-term impacts of concussion in the general population.
