@@ -75,6 +75,6 @@ user_groups:
 - Visitors
 ---
 
-Clara  Stafford is a graduate trainee in the Brain and Mind Institute at Western University, under the supervision of [Dr. Adrian Owen](https://owenlab.uwo.ca/). Her research interests include traumatic brain injuries and understanding the long-term biopsychosocial impacts related to concussion. She is currently undertaking her 3rd year in her PhD program.
+Clara  Stafford is a graduate trainee in the Social, Personality, Development Psychology area at Western University, under the supervision of [Dr. Paul F. Tremblay](http://publish.uwo.ca/~ptrembla/research-test.html). Her research interests include advanced measurement issues and advanced statistical modeling. Clara is a passionate programmer and has a keen eye for statistical inquiry and methodology. Consequently, she has taught statistics workshops at Western University, using both R and SPSS.
 
-Clara completed her undergraduate thesis in 2015, under the supervision of Dr. Michael Petrides at the world-renowned Montreal Neurological Institute. She subsequently joined Dr. Owen's lab as a research assistant before beginning her graduate studies at Western University. Her Master's thesis investigated the structural neural correlates of cognitive-motor dissociation in patients with prolonged disorders of consciousness. She began her PhD in September 2017, and switched her research focus to understanding the long-term impacts of concussion in the general population.
+Clara has worked for psychological and management consulting firms since 2018, and has worked on projects for both government and private industry clients. She is continuously on the lookout for additional consulting and contract-based opportunities.
