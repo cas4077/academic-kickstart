@@ -1,20 +1,18 @@
 ---
-title: "test"
-author: "null"
+title: test
+author: Clara A. Stafford
 date: '2020-11-16'
-slug: []
-categories: []
-tags: []
+tags:
+  - Test
 subtitle: Portfoliooooo
 summary: This is a test fo building my analyses portfolio
-authors: []
 lastmod: '2020-11-16T22:56:17-05:00'
 featured: yes
 image:
   caption: ''
   focal_point: ''
   preview_only: yes
-projects: []
+output: md_document
 ---
 
 ```{r include = FALSE}
