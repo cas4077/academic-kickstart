@@ -3,15 +3,15 @@
     "path": "~/GitHub/academic-kickstart/config/_default/params.toml",
     "project_path": "config/_default/params.toml",
     "type": "toml",
-    "hash": "179549520",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1605580589402.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
-        "cursorPosition": "92,15",
-        "scrollLine": "80"
+        "cursorPosition": "93,0",
+        "scrollLine": "84"
     },
     "folds": "",
     "lastKnownWriteTime": 1605580605,
