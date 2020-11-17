@@ -1,0 +1,36 @@
+---
+title: "test"
+author: "null"
+date: '2020-11-16'
+slug: []
+categories: []
+tags: []
+subtitle: Portfoliooooo
+summary: This is a test fo building my analyses portfolio
+authors: []
+lastmod: '2020-11-16T22:56:17-05:00'
+featured: yes
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: yes
+projects: []
+---
+
+```{r include = FALSE}
+library(viridis)
+```
+
+The code below dmeonstatrates two colour palettes in the [viridis](https://github.com/sjmgarnier/viridis) package. Each plot displays a contour map of the Maunga Whau volcano in Auckland, New Zealand.
+
+## Viridis colours
+
+```{r}
+image(volcano, col = viridis(200))
+```
+
+## Magma colours
+
+```{r}
+image(volcano, col=viridis(200, option = "A"))
+```
