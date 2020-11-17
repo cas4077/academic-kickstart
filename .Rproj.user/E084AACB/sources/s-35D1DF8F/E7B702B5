@@ -1,17 +1,17 @@
 {
-    "id": "2CB37D03",
-    "path": "~/GitHub/academic-kickstart/config/_default/config.toml",
-    "project_path": "config/_default/config.toml",
-    "type": "toml",
+    "id": "E7B702B5",
+    "path": "~/GitHub/academic-kickstart/content/publication/Journal_Neurology/index.md.md",
+    "project_path": "content/publication/Journal_Neurology/index.md.md",
+    "type": "markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1605587475488.0,
+    "created": 1605588400769.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 2,
     "properties": {
-        "cursorPosition": "61,35",
-        "scrollLine": "48"
+        "cursorPosition": "41,14",
+        "scrollLine": "11"
     },
     "folds": "",
     "lastKnownWriteTime": 1605580334,
