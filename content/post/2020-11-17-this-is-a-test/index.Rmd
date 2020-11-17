@@ -1,0 +1,25 @@
+---
+title: This is a test
+author: Clara
+date: '2020-11-17'
+categories:
+  - TidyTuesday
+tags:
+  - test
+lastmod: '2020-11-17T16:33:16-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+draft: no
+---
+
+Test
+```{r cool-plot, fig.cap='A cool plot.'}
+plot(cars, pch = 20) # not really cool
+```
+
+```{r cool-histogram, fig.cap='A cool histogram.'}
+hist(rnorm(100))
+```
