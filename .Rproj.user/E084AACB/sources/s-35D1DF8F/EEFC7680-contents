@@ -32,3 +32,4 @@ image(volcano, col = viridis(200))
 ```{r}
 image(volcano, col=viridis(200, option = "A"))
 ```
+blogdown::serve_site()
