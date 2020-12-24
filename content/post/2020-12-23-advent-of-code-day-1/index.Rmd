@@ -16,8 +16,8 @@ authors: []
 lastmod: '2020-12-23T16:43:12-05:00'
 featured: no
 image:
-  caption: ''
-  focal_point: ''
+  caption: "Photo by William Iven on [Unsplash](https://unsplash.com/photos/jrh5lAq-mIs)"
+  focal_point: "Center"
   preview_only: no
 projects: []
 output: html_document

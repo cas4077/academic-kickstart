@@ -16,8 +16,8 @@ authors: []
 lastmod: '2020-12-23T16:43:12-05:00'
 featured: no
 image:
-  caption: ''
-  focal_point: ''
+  caption: "Photo by William Iven on [Unsplash](https://unsplash.com/photos/jrh5lAq-mIs)"
+  focal_point: "Center"
   preview_only: no
 projects: []
 output: html_document
@@ -137,7 +137,7 @@ while (i &lt;= length(input)) {
 ## [1] &quot;Starting new round with: 976&quot;
 ## [1] &quot;You did it! The two numbers that sum to 2020 are 976 and 1044&quot;</code></pre>
 <pre class="r"><code>toc()</code></pre>
-<pre><code>## 0.02 sec elapsed</code></pre>
+<pre><code>## 0.01 sec elapsed</code></pre>
 <pre class="r"><code>print(paste0(&quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: &quot;, input[i]*input[j]))</code></pre>
 <pre><code>## [1] &quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: 1018944&quot;</code></pre>
 <p>This loop will first set <code>i</code> as the primary number and <code>j</code> as the secondary number. As long as <code>i</code> and <code>j</code> do <em>not</em> sum to our <code>2020</code> target, <code>j</code> will keep moving down the integer vector and sum it to <code>i</code>. If <code>j</code> reaches the last number in the vector (i.e number 200), then we set <code>i</code> to move to the next primary number and<code>j</code> to run down the vector again starting at <code>i</code>’s adjacent number (to avoid recalculating previous sums). Once <code>i</code> and <code>j</code> sum to our desired <code>2020</code> target, the loop will <code>break</code> and <code>print</code> a statement with the two entries that we are interested in - in this case, the two entries in my data that sum to <code>2020</code> are <code>976</code> and <code>1044</code>.</p>
