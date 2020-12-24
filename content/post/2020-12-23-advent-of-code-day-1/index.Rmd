@@ -76,9 +76,7 @@ As we can see, there are no adjacent pairs that sum to our `2020` target. This i
 
 My next idea for this puzzle is a loop. Now. If you talked to experience data analysts or data scientists, they would probably tell you that you should [try to avoid loops](https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf) whenever you can. I do not disagree with these arguments or this code hygiene - several blog posts on this issue often refer to "Flat is better than nested".
 
-> Flat is better than nested
-
-However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successfull but I will look up how other people have solved this puzzle *without* a loop, as learn from them.
+However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successful but I will look up how other people have solved this puzzle *without* a loop after this, to learn from them.
 
 ## Loops - Oh my!
 
