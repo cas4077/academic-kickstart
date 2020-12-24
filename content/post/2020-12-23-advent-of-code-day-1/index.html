@@ -1,0 +1,182 @@
+---
+title: Advent of Code - Day 1
+author: Clara Stafford
+date: '2020-12-23'
+slug: []
+categories:
+  - Advent of Code
+tags:
+  - advent of code
+  - programming
+  - puzzles
+  - R
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-12-23T16:43:12-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output: html_document
+---
+
+<script src="index_files/header-attrs/header-attrs.js"></script>
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="intro" class="section level1">
+<h1>Intro</h1>
+<p>Hi everyone! I am finally taking the opportunity to post my own code! I have been following the R/RStudio community for a long time, and I thought it was time I participated more actively in this community, if not just for my own personal development as a data analyst.</p>
+<p>Every week, I am aiming to post <em>my</em> solutions to the <a href="https://adventofcode.com/2020">2020 Advent of Code series</a>. I decided to finally participate in this series this year to force myself to code ‘non-academic’ problems and puzzles. To date, all my RStudio usage has been focused on my academic work, which means I have only focused on specific statistical analyses (e.g. GLM, SEM). This, however, means that I have little practice writing code that is more general and not just focused on using statistics functions and packages. I want to change this and build a more diverse portfolio for myself as I work towards entering the non-academic job market in a few years. As such, my solutions to this puzzles series may not be the most efficient or “optimal” or even the easiest way to solve the problems but they are <em>my</em> solutions and if the code works, I will be posting it. This is all part of my learning curve and I am hoping that by doing these puzzles every week, my code will become more efficient, optimal and easier as I learn more and more.</p>
+<p>That being said, let’s get started! Here is <strong>Advent of Code Day 1: Report Repair</strong></p>
+</div>
+<div id="report-repair" class="section level1">
+<h1>Report Repair</h1>
+<p>In this first puzzle we are asked to review the Elves’ expense report before we leave for the holidays. Specifically, we are asked to find the <code>two entries</code> that sum to <code>2020</code> and then <code>multiply</code> the two numbers together.</p>
+<p>This is the example expense report provided:</p>
+<blockquote>
+<p>1721<br />
+979<br />
+366<br />
+299<br />
+675<br />
+1456</p>
+</blockquote>
+<p>According to this example, the two entries that sum to <code>2020</code> are <code>1721</code> and <code>299</code>. Therefore the correct answer to this example puzzle is the product of these two numbers: <code>1721 * 299 = 514579</code>.</p>
+<p>Naturally, the actual expense report we must use to solve this puzzle is much larger (200 entries). So first, we must start with importing the data file and loading our packages.</p>
+<pre class="r"><code>library(here)
+library(dplyr)
+library(tictoc)
+
+input &lt;- read.delim(here(&quot;content&quot;, &quot;post&quot;, &quot;2020-12-23-advent-of-code-day-1&quot;, &quot;input.txt&quot;), header = FALSE)
+dplyr::glimpse(input)</code></pre>
+<pre><code>## Rows: 200
+## Columns: 1
+## $ V1 &lt;int&gt; 1844, 1123, 1490, 1478, 1108, 1120, 1594, 1101, 1831, 1146, 1084...</code></pre>
+<div id="easy-way-out" class="section level2">
+<h2>Easy way out</h2>
+<p>After a bit of googling, a first solution I thought I would try was to run down the data frame and get the sum of each pair of numbers. This can be done using the <code>RcppRoll</code> package. Here the <code>roll_sum</code> function is moving through the data frame two numbers at a time and summing them. This is simple, but a first way to check if the two numbers we are interested are next to each other.</p>
+<pre class="r"><code>#easy first solution.
+input$c &lt;- RcppRoll::roll_sum(input$V1,2, fill = NA)
+dplyr::glimpse(input)</code></pre>
+<pre><code>## Rows: 200
+## Columns: 2
+## $ V1 &lt;int&gt; 1844, 1123, 1490, 1478, 1108, 1120, 1594, 1101, 1831, 1146, 1084...
+## $ c  &lt;dbl&gt; 2967, 2613, 2968, 2586, 2228, 2714, 2695, 2932, 2977, 2230, 2619...</code></pre>
+<pre class="r"><code>which(input$c == 2020)</code></pre>
+<pre><code>## integer(0)</code></pre>
+<p>As we can see, there are no adjacent pairs that sum to our <code>2020</code> target. This is not unexpected as this puzzle would have been too easy if the magic numbers were right next to each other.</p>
+<p>My next idea for this puzzle is a loop. Now. If you talked to experience data analysts or data scientists, they would probably tell you that you should <a href="https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf">try to avoid loops</a> whenever you can. I do not disagree with these arguments or this code hygiene - several blog posts on this issue often refer to “Flat is better than nested”.</p>
+<blockquote>
+<p>Flat is better than nested</p>
+</blockquote>
+<p>However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successfull but I will look up how other people have solved this puzzle <em>without</em> a loop, as learn from them.</p>
+</div>
+<div id="loops---oh-my" class="section level2">
+<h2>Loops - Oh my!</h2>
+<p>The first thing I want to change is my data structure. In my first attempt, I imported the input <code>.txt</code> file as a <code>data.frame</code>, however for this loop I think I want to import my data into a simpler structure. Specifically, I am going to import it as a <code>vector</code> of integers.</p>
+<pre class="r"><code>tic()
+# read file as vector of integers
+input &lt;- as.integer(readLines(here(&quot;content&quot;, &quot;post&quot;, &quot;2020-12-23-advent-of-code-day-1&quot;, &quot;input.txt&quot;)))
+
+# set my first counter to the first number of the file
+i &lt;- 1
+# this second counter will start at the second number and run through the 198 other numbers and sum them to i
+j &lt;- 2
+target &lt;- 2020
+
+while (i &lt;= length(input)) {
+  if (j &lt;= length(input) &amp;&amp; sum(input[i], input[j]) != target) {
+    j = j+1
+  } else if (j &gt; length(input)) {
+    i = i+1
+    j = i+1
+    print(paste0(&quot;Starting new round with: &quot;, input[i]))
+  } else if (j &lt;= length(input) &amp;&amp; sum(input[i], input[j]) == target){
+    print(paste0(&quot;You did it! The two numbers that sum to &quot;, target, &quot; are &quot;, input[i], &quot; and &quot;, input[j]))
+    break
+  }
+}</code></pre>
+<pre><code>## [1] &quot;Starting new round with: 1123&quot;
+## [1] &quot;Starting new round with: 1490&quot;
+## [1] &quot;Starting new round with: 1478&quot;
+## [1] &quot;Starting new round with: 1108&quot;
+## [1] &quot;Starting new round with: 1120&quot;
+## [1] &quot;Starting new round with: 1594&quot;
+## [1] &quot;Starting new round with: 1101&quot;
+## [1] &quot;Starting new round with: 1831&quot;
+## [1] &quot;Starting new round with: 1146&quot;
+## [1] &quot;Starting new round with: 1084&quot;
+## [1] &quot;Starting new round with: 1535&quot;
+## [1] &quot;Starting new round with: 1016&quot;
+## [1] &quot;Starting new round with: 1722&quot;
+## [1] &quot;Starting new round with: 1388&quot;
+## [1] &quot;Starting new round with: 1188&quot;
+## [1] &quot;Starting new round with: 1351&quot;
+## [1] &quot;Starting new round with: 1477&quot;
+## [1] &quot;Starting new round with: 1215&quot;
+## [1] &quot;Starting new round with: 1678&quot;
+## [1] &quot;Starting new round with: 1159&quot;
+## [1] &quot;Starting new round with: 1558&quot;
+## [1] &quot;Starting new round with: 1581&quot;
+## [1] &quot;Starting new round with: 1400&quot;
+## [1] &quot;Starting new round with: 1550&quot;
+## [1] &quot;Starting new round with: 1306&quot;
+## [1] &quot;Starting new round with: 1852&quot;
+## [1] &quot;Starting new round with: 1745&quot;
+## [1] &quot;Starting new round with: 1224&quot;
+## [1] &quot;Starting new round with: 1896&quot;
+## [1] &quot;Starting new round with: 1596&quot;
+## [1] &quot;Starting new round with: 1005&quot;
+## [1] &quot;Starting new round with: 1499&quot;
+## [1] &quot;Starting new round with: 1797&quot;
+## [1] &quot;Starting new round with: 976&quot;
+## [1] &quot;You did it! The two numbers that sum to 2020 are 976 and 1044&quot;</code></pre>
+<pre class="r"><code>toc()</code></pre>
+<pre><code>## 0.02 sec elapsed</code></pre>
+<pre class="r"><code>print(paste0(&quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: &quot;, input[i]*input[j]))</code></pre>
+<pre><code>## [1] &quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: 1018944&quot;</code></pre>
+<p>This loop will first set <code>i</code> as the primary number and <code>j</code> as the secondary number. As long as <code>i</code> and <code>j</code> do <em>not</em> sum to our <code>2020</code> target, <code>j</code> will keep moving down the integer vector and sum it to <code>i</code>. If <code>j</code> reaches the last number in the vector (i.e number 200), then we set <code>i</code> to move to the next primary number and<code>j</code> to run down the vector again starting at <code>i</code>’s adjacent number (to avoid recalculating previous sums). Once <code>i</code> and <code>j</code> sum to our desired <code>2020</code> target, the loop will <code>break</code> and <code>print</code> a statement with the two entries that we are interested in - in this case, the two entries in my data that sum to <code>2020</code> are <code>976</code> and <code>1044</code>.</p>
+<p>Based on these results, the answer to the first part of my Advent of Code is the product of these two numbers: 1018944</p>
+<hr />
+<p>Yay! We correctly answered the first part and got some <code>loop</code> practice in. Now let’s get started with the second part. The Elves want to reward us further before the holidays if we are able to find the <code>three</code> entries in the expense report that sum to <code>2020</code>. As i the first part, the answer to this puzzle is the <code>product</code> of these three entries.</p>
+</div>
+<div id="part-deux-or-trois" class="section level2">
+<h2>Part deux (or trois?)</h2>
+<p>Now that we have to find 3 numbers, it’s obvious that we cannot use the same solution as above, as we have no way of knowing how to set our counters, as the three numbers will surely not be adjacent or spaced in any consistent manner. Therefore, my initial idea (albeit it maybe being time inefficient) was to find all possible combination of <code>three</code> entries, sum them, then filter which row’s sum is <code>2020</code> and multiply those three entries to arrive to our final answer.</p>
+<p>After some more googling, one package that allows us to generate a matrix all possible combinations of <code>n</code> numbers from an input vector is <code>RcppAlgos</code>, using the <code>comboGeneral</code> function. Let’s take a look.</p>
+<pre class="r"><code>library(RcppAlgos)
+# generate all possible combinations of 3 numbers based on the input vector from the problem
+poss.combos &lt;- data.frame(comboGeneral(input, 3))
+# create a new df column containing the sum of all other columns (i.e. sums of all combinatoins of three numbers)
+poss.combos$sums &lt;- rowSums(poss.combos)
+head(poss.combos)</code></pre>
+<pre><code>##     X1   X2   X3 sums
+## 1 1844 1123 1490 4457
+## 2 1844 1123 1478 4445
+## 3 1844 1123 1108 4075
+## 4 1844 1123 1120 4087
+## 5 1844 1123 1594 4561
+## 6 1844 1123 1101 4068</code></pre>
+<pre class="r"><code>#calculate the product of the three numbers that sum to 2020
+prod.three &lt;- prod(poss.combos[which(poss.combos$sums == 2020),1],
+                   poss.combos[which(poss.combos$sums == 2020),2],
+                   poss.combos[which(poss.combos$sums == 2020),3])
+
+print(paste0(&quot;The three entries that sum to 2020 are: &quot;,
+             poss.combos[which(poss.combos$sums == 2020),1], &quot;, &quot;,
+             poss.combos[which(poss.combos$sums == 2020),2], &quot; and &quot;,
+             poss.combos[which(poss.combos$sums == 2020),3], &quot;. Their product is &quot;,
+             prod.three))</code></pre>
+<pre><code>## [1] &quot;The three entries that sum to 2020 are: 1692, 312 and 16. Their product is 8446464&quot;</code></pre>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>And there we have it! Thankfully we were able to look through the expense reports for the Elves, and extract the entries they were looking. One step closer to saving the holidays before our well-deserved break!</p>
+<p>Let me know what you think of my process, where I could improve or if you have any questions!</p>
+</div>

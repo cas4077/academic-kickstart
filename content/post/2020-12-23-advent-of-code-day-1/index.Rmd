@@ -1,0 +1,156 @@
+---
+title: Advent of Code - Day 1
+author: Clara Stafford
+date: '2020-12-23'
+slug: []
+categories:
+  - Advent of Code
+tags:
+  - advent of code
+  - programming
+  - puzzles
+  - R
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-12-23T16:43:12-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output: html_document
+---
+
+# Intro 
+
+Hi everyone! I am finally taking the opportunity to post my own code! I have been following the R/RStudio community for a long time, and I thought it was time I participated more actively in this community, if not just for my own personal development as a data analyst.
+
+Every week, I am aiming to post *my* solutions to the [2020 Advent of Code series](https://adventofcode.com/2020). I decided to finally participate in this series this year to force myself to code 'non-academic' problems and puzzles. To date, all my RStudio usage has been focused on my academic work, which means I have only focused on specific statistical analyses (e.g. GLM, SEM). This, however, means that I have little practice writing code that is more general and not just focused on using statistics functions and packages. I want to change this and build a more diverse portfolio for myself as I work towards entering the non-academic job market in a few years. As such, my solutions to this puzzles series may not be the most efficient or "optimal" or even the easiest way to solve the problems but they are *my* solutions and if the code works, I will be posting it. This is all part of my learning curve and I am hoping that by doing these puzzles every week, my code will become more efficient, optimal and easier as I learn more and more.
+
+That being said, let's get started! Here is **Advent of Code Day 1: Report Repair**
+
+# Report Repair
+
+In this first puzzle we are asked to review the Elves' expense report before we leave for the holidays. Specifically, we are asked to find the `two entries` that sum to `2020` and then `multiply` the two numbers together.
+
+This is the example expense report provided:
+
+> 1721  
+979  
+366  
+299  
+675  
+1456  
+
+According to this example, the two entries that sum to `2020` are `1721` and `299`. Therefore the correct answer to this example puzzle is the product of these two numbers: `1721 * 299 = 514579`.
+
+Naturally, the actual expense report we must use to solve this puzzle is much larger (200 entries). So first, we must start with importing the data file and loading our packages. 
+
+
+```{r setup, warning = FALSE, message = FALSE}
+library(here)
+library(dplyr)
+library(tictoc)
+
+input <- read.delim(here("content", "post", "2020-12-23-advent-of-code-day-1", "input.txt"), header = FALSE)
+dplyr::glimpse(input)
+```
+
+
+## Easy way out
+
+After a bit of googling, a first solution I thought I would try was to run down the data frame and get the sum of each pair of numbers. This can be done using the `RcppRoll` package. Here the `roll_sum` function is moving through the data frame two numbers at a time and summing them. This is simple, but a first way to check if the two numbers we are interested are next to each other.
+
+```{r quick.sol, warning = FALSE, message = FALSE}
+
+#easy first solution.
+input$c <- RcppRoll::roll_sum(input$V1,2, fill = NA)
+dplyr::glimpse(input)
+which(input$c == 2020)
+
+```
+
+As we can see, there are no adjacent pairs that sum to our `2020` target. This is not unexpected as this puzzle would have been too easy if the magic numbers were right next to each other.
+
+My next idea for this puzzle is a loop. Now. If you talked to experience data analysts or data scientists, they would probably tell you that you should [try to avoid loops](https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf) whenever you can. I do not disagree with these arguments or this code hygiene - several blog posts on this issue often refer to "Flat is better than nested".
+
+> Flat is better than nested
+
+However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successfull but I will look up how other people have solved this puzzle *without* a loop, as learn from them.
+
+## Loops - Oh my!
+
+The first thing I want to change is my data structure. In my first attempt, I imported the input `.txt` file as a `data.frame`, however for this loop I think I want to import my data into a simpler structure. Specifically, I am going to import it as a `vector` of integers.
+
+```{r loop.oops, warning = FALSE, message = FALSE}
+tic()
+# read file as vector of integers
+input <- as.integer(readLines(here("content", "post", "2020-12-23-advent-of-code-day-1", "input.txt")))
+
+# set my first counter to the first number of the file
+i <- 1
+# this second counter will start at the second number and run through the 198 other numbers and sum them to i
+j <- 2
+target <- 2020
+
+while (i <= length(input)) {
+  if (j <= length(input) && sum(input[i], input[j]) != target) {
+    j = j+1
+  } else if (j > length(input)) {
+    i = i+1
+    j = i+1
+    print(paste0("Starting new round with: ", input[i]))
+  } else if (j <= length(input) && sum(input[i], input[j]) == target){
+    print(paste0("You did it! The two numbers that sum to ", target, " are ", input[i], " and ", input[j]))
+    break
+  }
+}
+
+toc()
+print(paste0("The answer to the first puzzle of Advent of Code 2020 Day 1 is: ", input[i]*input[j]))
+
+
+```
+
+This loop will first set `i` as the primary number and `j` as the secondary number. As long as `i` and `j` do *not* sum to our `2020` target, `j` will keep moving down the integer vector and sum it to `i`. If `j` reaches the last number in the vector (i.e number 200), then we set `i` to move to the next primary number and`j` to run down the vector again starting at `i`'s adjacent number (to avoid recalculating previous sums). Once `i` and `j` sum to our desired `2020` target, the loop will `break` and `print` a statement with the two entries that we are interested in - in this case, the two entries in my data that sum to `2020` are `976` and `1044`.
+
+Based on these results, the answer to the first part of my Advent of Code is the product of these two numbers: `r input[i]*input[j]`
+
+***
+
+Yay! We correctly answered the first part and got some `loop` practice in. Now let's get started with the second part. The Elves want to reward us further before the holidays if we are able to find the `three` entries in the expense report that sum to `2020`. As i the first part, the answer to this puzzle is the `product` of these three entries.
+
+## Part deux (or trois?)
+
+Now that we have to find 3 numbers, it's obvious that we cannot use the same solution as above, as we have no way of knowing how to set our counters, as the three numbers will surely not be adjacent or spaced in any consistent manner. Therefore, my initial idea (albeit it maybe being time inefficient) was to find all possible combination of `three` entries, sum them, then filter which row's sum is `2020` and multiply those three entries to arrive to our final answer.
+
+After some more googling, one package that allows us to generate a matrix all possible combinations of `n` numbers from an input vector is `RcppAlgos`, using the `comboGeneral` function. Let's take a look.
+
+```{r three.entries, warning = FALSE, message = FALSE}
+library(RcppAlgos)
+# generate all possible combinations of 3 numbers based on the input vector from the problem
+poss.combos <- data.frame(comboGeneral(input, 3))
+# create a new df column containing the sum of all other columns (i.e. sums of all combinatoins of three numbers)
+poss.combos$sums <- rowSums(poss.combos)
+head(poss.combos)
+
+#calculate the product of the three numbers that sum to 2020
+prod.three <- prod(poss.combos[which(poss.combos$sums == 2020),1],
+                   poss.combos[which(poss.combos$sums == 2020),2],
+                   poss.combos[which(poss.combos$sums == 2020),3])
+
+print(paste0("The three entries that sum to 2020 are: ",
+             poss.combos[which(poss.combos$sums == 2020),1], ", ",
+             poss.combos[which(poss.combos$sums == 2020),2], " and ",
+             poss.combos[which(poss.combos$sums == 2020),3], ". Their product is ",
+             prod.three))
+
+```
+
+# Conclusion
+
+And there we have it! Thankfully we were able to look through the expense reports for the Elves, and extract the entries they were looking. One step closer to saving the holidays before our well-deserved break!
+
+Let me know what you think of my process, where I could improve or if you have any questions!
