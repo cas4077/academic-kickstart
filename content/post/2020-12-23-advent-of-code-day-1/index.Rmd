@@ -20,10 +20,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
-output: 
-  html_document: 
-    highlight: tango
-    theme: yeti
+output: html_document
 ---
 
 # Intro 
