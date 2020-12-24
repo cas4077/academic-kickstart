@@ -71,15 +71,12 @@ dplyr::glimpse(input)</code></pre>
 <pre><code>## integer(0)</code></pre>
 <p>As we can see, there are no adjacent pairs that sum to our <code>2020</code> target. This is not unexpected as this puzzle would have been too easy if the magic numbers were right next to each other.</p>
 <p>My next idea for this puzzle is a loop. Now. If you talked to experience data analysts or data scientists, they would probably tell you that you should <a href="https://medium.com/python-pandemonium/never-write-for-loops-again-91a5a4c84baf">try to avoid loops</a> whenever you can. I do not disagree with these arguments or this code hygiene - several blog posts on this issue often refer to “Flat is better than nested”.</p>
-<blockquote>
-<p>Flat is better than nested</p>
-</blockquote>
-<p>However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successfull but I will look up how other people have solved this puzzle <em>without</em> a loop, as learn from them.</p>
+<p>However, as I am still new to non-academic coding, I will go ahead with this loop idea as I think it will be successfull but I will look up how other people have solved this puzzle <em>without</em> a loop after this, as to learn from them.</p>
 </div>
 <div id="loops---oh-my" class="section level2">
 <h2>Loops - Oh my!</h2>
 <p>The first thing I want to change is my data structure. In my first attempt, I imported the input <code>.txt</code> file as a <code>data.frame</code>, however for this loop I think I want to import my data into a simpler structure. Specifically, I am going to import it as a <code>vector</code> of integers.</p>
-<pre class="r"><code>tic()
+<pre class="r"><code>
 # read file as vector of integers
 input &lt;- as.integer(readLines(here(&quot;content&quot;, &quot;post&quot;, &quot;2020-12-23-advent-of-code-day-1&quot;, &quot;input.txt&quot;)))
 
@@ -136,8 +133,7 @@ while (i &lt;= length(input)) {
 ## [1] &quot;Starting new round with: 1797&quot;
 ## [1] &quot;Starting new round with: 976&quot;
 ## [1] &quot;You did it! The two numbers that sum to 2020 are 976 and 1044&quot;</code></pre>
-<pre class="r"><code>toc()</code></pre>
-<pre><code>## 0.01 sec elapsed</code></pre>
+<pre class="r"></pre>
 <pre class="r"><code>print(paste0(&quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: &quot;, input[i]*input[j]))</code></pre>
 <pre><code>## [1] &quot;The answer to the first puzzle of Advent of Code 2020 Day 1 is: 1018944&quot;</code></pre>
 <p>This loop will first set <code>i</code> as the primary number and <code>j</code> as the secondary number. As long as <code>i</code> and <code>j</code> do <em>not</em> sum to our <code>2020</code> target, <code>j</code> will keep moving down the integer vector and sum it to <code>i</code>. If <code>j</code> reaches the last number in the vector (i.e number 200), then we set <code>i</code> to move to the next primary number and<code>j</code> to run down the vector again starting at <code>i</code>’s adjacent number (to avoid recalculating previous sums). Once <code>i</code> and <code>j</code> sum to our desired <code>2020</code> target, the loop will <code>break</code> and <code>print</code> a statement with the two entries that we are interested in - in this case, the two entries in my data that sum to <code>2020</code> are <code>976</code> and <code>1044</code>.</p>
@@ -152,7 +148,7 @@ while (i &lt;= length(input)) {
 <pre class="r"><code>library(RcppAlgos)
 # generate all possible combinations of 3 numbers based on the input vector from the problem
 poss.combos &lt;- data.frame(comboGeneral(input, 3))
-# create a new df column containing the sum of all other columns (i.e. sums of all combinatoins of three numbers)
+# create a new df column containing the sum of all other columns (i.e. sums of all combinations of three numbers)
 poss.combos$sums &lt;- rowSums(poss.combos)
 head(poss.combos)</code></pre>
 <pre><code>##     X1   X2   X3 sums
