@@ -83,7 +83,6 @@ However, as I am still new to non-academic coding, I will go ahead with this loo
 The first thing I want to change is my data structure. In my first attempt, I imported the input `.txt` file as a `data.frame`, however for this loop I think I want to import my data into a simpler structure. Specifically, I am going to import it as a `vector` of integers.
 
 ```{r loop.oops, warning = FALSE, message = FALSE}
-tic()
 # read file as vector of integers
 input <- as.integer(readLines(here("content", "post", "2020-12-23-advent-of-code-day-1", "input.txt")))
 
@@ -106,7 +105,6 @@ while (i <= length(input)) {
   }
 }
 
-toc()
 print(paste0("The answer to the first puzzle of Advent of Code 2020 Day 1 is: ", input[i]*input[j]))
 
 
@@ -130,7 +128,7 @@ After some more googling, one package that allows us to generate a matrix all po
 library(RcppAlgos)
 # generate all possible combinations of 3 numbers based on the input vector from the problem
 poss.combos <- data.frame(comboGeneral(input, 3))
-# create a new df column containing the sum of all other columns (i.e. sums of all combinatoins of three numbers)
+# create a new df column containing the sum of all other columns (i.e. sums of all combinations of three numbers)
 poss.combos$sums <- rowSums(poss.combos)
 head(poss.combos)
 
