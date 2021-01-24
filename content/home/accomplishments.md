@@ -19,6 +19,16 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[item]]
+  organization = "rstudio::global(2021)"
+  organization_url = "https://rstudio.com/conference/"
+  title = "RStudio Diversity Scholar"
+  url = ""
+  certificate_url = ""
+  date_start = "2021-01-08"
+  date_end = ""
+  description = "Access to exclusive workshops and networking opportunities"
+
+[[item]]
   organization = "Western University"
   organization_url = ""
   title = "G. Keith Humphrey Memorial Award"
@@ -36,7 +46,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2019-06-19"
   date_end = ""
-  description = "$500"
+  description = "$500, nominated by students"
 
 [[item]]
   organization = "Western University"
@@ -46,7 +56,7 @@ date_format = "Jan 2006"
   certificate_url = ""
   date_start = "2019-09-01"
   date_end = "2020-08-31"
-  description = "$15,000, Scholarship"
+  description = "$15,000, Provincial scholarship based on academic and research achievements"
 
 [[item]]
   organization = "Western University"
