@@ -21,6 +21,13 @@
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
+\makeatletter
+\DeclareRobustCommand{\bfseries}{%
+  \not@math@alphabet\bfseries\mathbf
+  \fontseries\bfdefault\selectfont
+}
+\makeatother
+
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
@@ -35,8 +42,8 @@
 \cvdate{} % Date of birth
 \cvaddress{} % Short address/location, use \newline if more than 1 line is required
 \cvnumberphone{548-888-1993} % Phone number
-\cvsite{clarastafford.netlify.com} % Personal website
-\cvmail{cas4077@gmail.com} % Email address
+\cvsite{clarastafford.netlify.app} % Personal website
+\cvmail{clara.stafford922@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
 
@@ -46,7 +53,7 @@
 %	 ABOUT ME
 %----------------------------------------------------------------------------------------
 
-\aboutme{I am a PhD Student in the Social, Personality and Developmental Psychology Program at the University of Western Ontario. I have extensive hands-on experience designing online reasearch studies, using paltforms such as Qualtrics and MTurk. I have taken all graduate statistics courses available in the Department of Psychology at Western University, including Strucutural Equation Modeling and Latent Variable Modeling. My current dissertation projects focus on the psychometric evaluation of cognitive tests used to assess cognition after concussion. I import, clean, analyze and visualize my data using R.} % To have no About Me section, just remove all the text and leave \aboutme{}
+\aboutme{I am a PhD Student in the Social, Personality and Developmental Psychology Program at the University of Western Ontario. I have extensive hands-on experience designing online reasearch studies, using paltforms such as Qualtrics and MTurk. I have taken all graduate statistics courses available in the Department of Psychology at Western University, including Strucutural Equation Modeling and Latent Variable Modeling. My current dissertation projects focus on the long term outcomes of workplace injury and illness. I import, clean, analyze and visualize my data using R.} % To have no About Me section, just remove all the text and leave \aboutme{}
 
 %----------------------------------------------------------------------------------------
 %	 SKILLS
@@ -70,7 +77,7 @@
 
 \section{Interests}
 
-My main interests include research design and methods and statistical programming. I have hands-on experience with General Linear Modeling, Classical Test Theory,  Strucutural Equation Modeling and Item Response Theory using R.
+My main interests include research design and methods and statistical programming. I have hands-on experience with General Linear Modeling, Classical Test Theory, and Strucutural Equation Modeling using R.
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
@@ -108,13 +115,13 @@ My main interests include research design and methods and statistical programmin
 \section{Awards}
 
 \begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{2021}{rstudio::global(2021) conference Diversity Scholarship}
-	\twentyitemshort{2020}{London Skating Club Adult Program Assistant of the Year}
-	\twentyitemshort{2020}{G. Keith Humphrey Memorial Award, \$650}
-	\twentyitemshort{2019}{Graduate Student Teaching Award, \$500}
-	\twentyitemshort{2019-2020}{Ontario Graduate Scholarships, \$15,000}
-	\twentyitemshort{2016}{Reva Gerstein Fellowship for Masters Study in Psychology, \$2,800}
-	\twentyitemshort{2016}{George Hannah Global Opportunities Travel Award, \$2,000}
+	\twentyitemshort{2021}{\normalfont rstudio::global(2021) conference Diversity Scholarship}
+	\twentyitemshort{2020}{\normalfont London Skating Club Adult Program Assistant of the Year}
+	\twentyitemshort{2020}{\normalfont G. Keith Humphrey Memorial Award, \$650}
+	\twentyitemshort{2019}{\normalfont Graduate Student Teaching Award, \$500}
+	\twentyitemshort{2019-2020}{\normalfont Ontario Graduate Scholarships, \$15,000}
+	\twentyitemshort{2016}{\normalfont Reva Gerstein Fellowship for Masters Study in Psychology, \$2,800}
+	\twentyitemshort{2016}{\normalfont George Hannah Global Opportunities Travel Award, \$2,000}
 	%\twentyitemshort{<dates>}{<title/description>}
 \end{twentyshort}
 
@@ -129,6 +136,8 @@ My main interests include research design and methods and statistical programmin
 	\item \textbf{Stafford, C.A.}, Stojanoski, B., Wild, C. J., Brewer-Deluce, D., Wilson, T. D., \& Owen, A. M. (2020). Concussion related deficits in the general population predict impairments in varsity footballers. \emph{Journal of Neurology}.\newline
 	https://doi.org/10.1007/s00415-020-09749-9.
 	\item \textbf{Stafford, C. A.}, Owen, A. M., \& Fern\'andez-Espejo, D. (2019). The neural basis of external responsiveness in prolonged disorders of consciousness. \emph{NeuroImage: Clinical, 22}, 101791. https://doi.org/10.1016/j.nicl.2019.101791.
+\subsection{Submitted}
+	\item Van Bavel, J. J., Cichocka, A., Capraro, V., Sjåstad, H., Nezlek, J. B., Pavlović, T., Alfano, M., Gelfand, M. J., Azevedo, F., Birtel, M. D., Cislak, A., Lamm, C., Ross, R. M., Abts, K., Aruta, J. J. B., Bastian, B., Besharati, S., Bor, A., Choma, B. L., ..., \textbf{Stafford, C. A.}, ... Boggio, P. S. (2020). The role of social and moral psychology factors in public health intentions during a pandemic: An international collaboration.
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
@@ -188,9 +197,11 @@ My main interests include research design and methods and statistical programmin
 \section{Outreach}
 
 \begin{itemize}
-	\item Guillemette, R. (2020, April 17). Commotions c\'er\'ebrales: une nouvelle \'etude met en garde les joueurs de football d`ici. Retrieved from https://ici.radio-canada.ca/
+	\item Guillemette, R. (2020, April 17). Commotions c\'er\'ebrales: une nouvelle \'etude met en garde les joueurs de football d`ici. \newline
+	Retrieved from https://ici.radio-canada.ca/
 	\item Mayne, P. (2020, April 16). Study links concussions to loss of inhibition. Western News. Retrieved from https://news.westernu.ca/
-	\item Zadorsky, C. (2019, August 29). Western study on long-term concussion effects seeking participants. CTVNews London. Retrieved from https://london.ctvnews.ca/
+	\item Zadorsky, C. (2019, August 29). Western study on long-term concussion effects seeking participants. CTVNews London. \newline
+	Retrieved from https://london.ctvnews.ca/
 	\item Stafford, C. A. (2019, August 29). CTV News London at 6. (C. Zardosky, Interviewer). Retrieved from https://london.ctvnews.ca/
 \end{itemize}
 
