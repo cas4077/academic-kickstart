@@ -15,7 +15,6 @@ geometry: margin=1in
 fontawesome: no
 email: clara.stafford922@gmail.com
 github: cas4077
-phone: 1-548-888-1993
 address: Social Sciences Building, Western University, ON, Canada
 web: clarastafford.netlify.app
 updated: yes
