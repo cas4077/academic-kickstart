@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1620154935 "c:/Users/Clara/Documents/GitHub/academic-kickstart/static/files/Work-CV_clara-stafford.tex" "Work-CV_clara-stafford.pdf" "Work-CV_clara-stafford" 1620154939
+["pdflatex"] 1620334729 "c:/Users/Clara/Documents/GitHub/academic-kickstart/static/files/Work-CV_clara-stafford.tex" "Work-CV_clara-stafford.pdf" "Work-CV_clara-stafford" 1620334849
   "C:/Users/Clara/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1619817421 9524577 07119fbf3b0cf98fa048071b9368e0e7 ""
   "C:/Users/Clara/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1620153059 360125 75271607b80ceca703ca9953bfae5021 ""
   "C:/Users/Clara/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/clearsans/clr_nrghxx.enc" 1571239265 3317 49c09c087ace8f807c62d66ec2c69191 ""
@@ -154,14 +154,14 @@
   "C:/Users/Clara/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Clara/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/Clara/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1606302286 4902 efb3d66683a2da2a232f71e3a571a899 ""
-  "Work-CV_clara-stafford.aux" 1620154938 775 7a75881e5a8ad63241d05e48303691cc "pdflatex"
-  "Work-CV_clara-stafford.out" 1620154938 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Work-CV_clara-stafford.tex" 1620154935 12290 ed3c4931be704e52d5e0782ce17fdf8c ""
-  "c:/Users/Clara/Documents/GitHub/academic-kickstart/static/files/Work-CV_clara-stafford.tex" 1620154935 12290 ed3c4931be704e52d5e0782ce17fdf8c ""
+  "Work-CV_clara-stafford.aux" 1620334732 775 e7915bbd2cb1c9221015375d976e8b8d "pdflatex"
+  "Work-CV_clara-stafford.out" 1620334732 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Work-CV_clara-stafford.tex" 1620334849 12372 26ac865af70f2bbb7b9aaad601671cf8 ""
+  "c:/Users/Clara/Documents/GitHub/academic-kickstart/static/files/Work-CV_clara-stafford.tex" 1620334849 12372 26ac865af70f2bbb7b9aaad601671cf8 ""
   "headshot_CAS_2017.jpg" 1611469756 1111819 8967e028cfecdc8d2520c73c710798ad ""
   "twentysecondcv.cls" 1620154647 8665 285da1a97655bcfbc1739fac89cf8bbb ""
   (generated)
+  "Work-CV_clara-stafford.log"
   "Work-CV_clara-stafford.pdf"
   "Work-CV_clara-stafford.aux"
   "Work-CV_clara-stafford.out"
-  "Work-CV_clara-stafford.log"
