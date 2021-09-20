@@ -6,7 +6,7 @@ output:
     latex_engine: pdflatex
     template: C:/Users/Clara/OneDrive - The University of Western Ontario/Documents/latex-cv_orig.tex
   word_document: default
-jobtitle: Ph.D. Trainee
+jobtitle: Ph.D. Candidate
 fontfamily: helvet
 fontsize: 10pt
 linkcolor: maroon
