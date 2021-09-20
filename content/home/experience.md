@@ -39,7 +39,7 @@ date_format = "Jan 2006"
   company_url = "https://www.hrsg.ca/"
   location = "Remote contract work"
   date_start = "2018-03-01"
-  date_end = ""
+  date_end = "2021-01-01"
   description = """
   Responsibilities include:
 
@@ -48,5 +48,20 @@ date_format = "Jan 2006"
   * Write technical reports, translating academic and technical terminology for a general audience
   """
 
+[[experience]]
+  title = "User Experience Research Co-Op"
+  company = "Electronic Arts"
+  company_url = "https://www.ea.com/ea-studios/motive"
+  location = "Montreal, Quebec, Canada"
+  date_start = "2021-05-10"
+  date_end = "2021-12-17"
+  description = """
+  Responsibilities include:
+
+  * Conduct studies to assess player understanding of design intentions and player appreciation
+  * Analyze quantitative and qualitative data from surveys, play test sessions and user testing sessions
+  * Engage in strategic research to validate and improve EA's UXR methods
+  * Report writing and presentation for various stakeholders from the game development team
+  """
 
 +++
