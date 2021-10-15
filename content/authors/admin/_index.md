@@ -49,7 +49,7 @@ social:
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/cas4077
+  link: https://twitter.com/claraAstafford
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.ca/citations?user=5X-G6z8AAAAJ&hl=en

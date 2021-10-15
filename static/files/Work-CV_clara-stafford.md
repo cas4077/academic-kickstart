@@ -57,7 +57,7 @@ School of Psychology, University of Birmingham, Birmingham, UK
 
 # Technical Knowledge
 
-RStudio/R, SPSS, GitHub, JASP, Bash, FSL, MPlus, MATLAB, EEGlab, Brainsight, Tableau
+RStudio/R, SPSS, GitHub, JASP, MPlus, MATLAB, Tableau, Microsoft Office (Excel, Word, PowerPoint)
 
 # Awards and Scholarships
 
