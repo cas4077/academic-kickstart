@@ -72,17 +72,29 @@
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
+\newcommand{\header}[6]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth,
 minimum height=4cm, yshift=0.5mm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
+    \node [anchor=south] (name) at (box) {%
       \fontsize{48pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{18pt}{24pt}\color{header}%
       \thinfont #3%
+    };
+    \node [anchor=north, yshift = -1cm] at (name.south) {%
+      \fontsize{12pt}{12pt}\color{header}%
+      \thinfont #4%
+    };
+    \node [anchor=north, yshift = -1cm, xshift = 7cm] at (name.south) {%
+      \fontsize{12pt}{12pt}\color{header}%
+      \thinfont #5%
+    };
+    \node [anchor=north, yshift = -1cm, xshift = -7cm] at (name.south) {%
+      \fontsize{12pt}{12pt}\color{header}%
+      \thinfont #6%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
@@ -94,7 +106,7 @@ minimum height=4cm, yshift=0.5mm] (box) at (current page.north){};
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth,
 minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{24pt}{36pt}\color{header}%
+      \fontsize{18pt}{24pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
   \end{tikzpicture}
@@ -147,7 +159,7 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{2cm}l}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}p{2.5cm}l}
 }{%
   \end{tabular*}
 }
@@ -167,12 +179,12 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 
 % each item is a manual entry, since a bibfile is more pain than pleasure
 % for most people's CVs.
-\newcommand{\bibentry}[3]{%
-  {\bfseries #1}\\%
-  \hangindent=5mm \hangafter1%
+\newcommand{\bibentry}[4]{%
+  {\itshape #1}\\%
   {\color{black} \bodyfont #2\\%
-  {\footnotesize \bodyfont #3}}%
-  }%
+  {\footnotesize \bodyfont #3}\\%
+  {\footnotesize \bodyfont #4}}%
+  \\}%
 
 %%%%%%%%%%%%%%
 % Side block %
@@ -182,9 +194,10 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
-  \let\oldsection\section
-  \renewcommand{\section}[1]{
+ \let\oldsection\section
+ \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+    \color{gray}
   }
   \begin{textblock}{3.6}(1.5, 4.33)
   \begin{flushright}
@@ -200,7 +213,7 @@ minimum height=2cm, yshift=0.5mm] (box) at (current page.north){};
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.5cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
     colorlinks=false}

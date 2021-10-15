@@ -34,7 +34,7 @@ B.A. Psychology, McGill University, Montreal, QC, Canada \hfill 2012-15
 
 # Work Experience
 
-User Experience Research Intern \hfill May 2021-December 2021
+User Experience Research Co-Op \hfill May 2021-December 2021
 \newline
 Electronic Arts, Montreal, QC, CAN
 
@@ -54,7 +54,6 @@ Post-Graduate Research Student \hfill June - August 2016
 \newline
 School of Psychology, University of Birmingham, Birmingham, UK
 \newline
-*Supervisor: Dr. Davinia Fernandez-Espejo*
 
 # Technical Knowledge
 
@@ -74,22 +73,19 @@ G. Keith Humphrey Memorial Award, Western University, 650$
 Graduate Student Teaching Award (GSTA), Western University, 500$
 \hfill 2019
 
-Ontario Graduate Scholarships (OGS), Western University, 15,000$ \hfill 2019-2020
+Ontario Graduate Scholarships (OGS), Western University, 15,000$ 
+\hfill 2019-2020
 
-Western University Graduate Research Scholarship, 13,330$ \hfill 2018-2019
+Reva Gerstein Fellowship for Masters Study in Psychology, Western University, 2800$ 
+\hfill 2016
 
-Western University Graduate Research Scholarship, 13,330$ \hfill 2017-2018
-
-Western University Graduate Research Scholarship, 12,201$ \hfill 2016-2017
-
-Reva Gerstein Fellowship for Masters Study in Psychology, Western University, 2800$ \hfill 2016
-
-George Hannah Global Opportunities Award, Travel Award, 2000$ \hfill 2016
-
-Western University Graduate Research Scholarship, 12, 600$ \hfill 2015-2016
+George Hannah Global Opportunities Award, Travel Award, 2000$ 
+\hfill 2016
 
 
 # Publications
+
+1. Van Bavel, J. J., Cichocka, A., Capraro, V., Sjåstad, H., Nezlek, J., Pavlović, T., Alfano, M., Gelfand, M. J., Azevedo, F., Birtel, M. D., Cislak, A., Lockwood, P. L., Ross, R. M., Abts, K., Agadullina, E., Aruta, J. J. B., Besharati, S. N., Bor, A., Choma, B. L., Crabtree, C. D., Cunningham, W. A., De, K., Ejaz, W., Elbaek, C. T., ... Boggio, P. S. (in press). National identity predicts public health support during a global pandemic. *Nature Communications*.
 
 1. **Stafford, C. A.**, Stojanoski, B., Wild, C. J., Brewer-Deluce, D., & Owen, A. M. (2020). Concussion related deficits in the general population predict impairments in varsity footballers. *Journal of Neurology*. https://doi.org/10.1007/s00415-020-09749-9
 
