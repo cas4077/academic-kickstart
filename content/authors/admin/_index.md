@@ -77,4 +77,4 @@ user_groups:
 
 Clara  Stafford is a PhD Candidate in the Social, Personality and Developmental Psychology area at Western University, under the supervision of [Dr. Paul F. Tremblay](http://publish.uwo.ca/~ptrembla/research-test.html). Her research interests include advanced measurement issues and advanced statistical modeling. Clara is a passionate programmer and has a keen eye for statistical inquiry and methodology. Consequently, she has taught statistics workshops at Western University, using both R and SPSS.
 
-Clara has worked for psychological and management consulting firms since 2018, and has worked on projects for both government and private industry clients. Currently, she is a User Experience Research Co-Op at Electronic Arts working with game development teams from both Motive and BioWare studios.
+Clara has worked for psychological and management consulting firms since 2018, and has worked on projects for both government and private industry clients. More recently, she has worked as a User Experience Research Co-Op at Electronic Arts working with game development teams from both Motive and BioWare studios.
