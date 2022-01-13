@@ -6,7 +6,7 @@ output:
     latex_engine: pdflatex
     template: C:/Users/Clara/OneDrive - The University of Western Ontario/Documents/latex-cv_orig.tex
   word_document: default
-jobtitle: Ph.D. Candidate and UX Research Co-Op
+jobtitle: Ph.D. Candidate and Data Analyst
 fontfamily: helvet
 fontsize: 10pt
 linkcolor: maroon
