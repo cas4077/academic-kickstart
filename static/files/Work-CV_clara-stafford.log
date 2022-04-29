@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.12)  13 JAN 2022 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.12)  29 APR 2022 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -488,12 +488,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/Users/Clara/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdfte
 x.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 242--251
+Underfull \hbox (badness 10000) in paragraph at lines 246--255
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--257
+Underfull \hbox (badness 10000) in paragraph at lines 255--261
 
  []
 
@@ -507,7 +507,7 @@ Package rerunfilecheck Info: File `Work-CV_clara-stafford.out' has not changed.
 Here is how much of TeX's memory you used:
  10246 strings out of 480539
  150183 string characters out of 5901136
- 472281 words of memory out of 5000000
+ 473281 words of memory out of 5000000
  27730 multiletter control sequences out of 15000+600000
  413068 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -521,9 +521,9 @@ AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <
 c:/Users/Clara/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
 rm1000.600pk> <c:/Users/Clara/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour
 /jknappen/ec/ecbx2074.600pk>
-Output written on Work-CV_clara-stafford.pdf (2 pages, 82471 bytes).
+Output written on Work-CV_clara-stafford.pdf (2 pages, 82860 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
+ 351 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
  20 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)

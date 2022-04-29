@@ -39,6 +39,10 @@ Supervisor: Dr. Paul F. Tremblay
 
 # WORK EXPERIENCE
 \hrule
+**Behaviour Interactive** \hfill {\textbf{Montr\'eal, Queb\'ec}}
+\newline
+*Quantitative User Research Specialist* \hfill {\textit{March 2022 - present}}
+
 **Electronic Arts** \hfill {\textbf{Montr\'eal, Queb\'ec}}
 \newline
 *User Experience Research Co-Op* \hfill {\textit{May 2021-December 2021}}
