@@ -63,5 +63,15 @@ date_format = "Jan 2006"
   * Engage in strategic research to validate and improve EA's UXR methods
   * Report writing and presentation for various stakeholders from the game development team
   """
+  
+  [[experience]]
+  title = "Quantitative User Research Specialist"
+  company = "Behaviour Interactive"
+  company_url = "https://www.bhvr.com/"
+  location = "Montreal, Quebec, Canada"
+  date_start = "2022-02-28"
+  date_end = ""
+  description = """
+  """
 
 +++
