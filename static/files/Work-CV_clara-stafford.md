@@ -40,7 +40,7 @@ Supervisor: Dr. Paul F. Tremblay
 
 # WORK EXPERIENCE
 
-\hrule **Behaviour Interactive** \hfill {\textbf{Montr'eal, Queb'ec}}
+\hrule **Behaviour Interactive** \hfill {\textbf{Montr'eal, Qu'ebec}}
 \newline *Quantitative User Research Specialist* \hfill {\textit{March
 2022 - present}} \newline
 
@@ -49,7 +49,7 @@ Supervisor: Dr. Paul F. Tremblay
 -   Implemented workflow to visualize survey data in interactive data
     visualization software for stakeholders.
 
-**Electronic Arts** \hfill {\textbf{Montr'eal, Queb'ec}} \newline *User
+**Electronic Arts** \hfill {\textbf{Montr'eal, Qu'ebec}} \newline *User
 Experience Research Co-Op* \hfill {\textit{May 2021-December 2021}}
 \newline
 
