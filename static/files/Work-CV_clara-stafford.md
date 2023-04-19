@@ -2,11 +2,11 @@
 title: "Curriculum Vitae"
 author: "Clara Stafford"
 output:
-  pdf_document: 
-    template: "C:/Users/Clara/OneDrive - The University of Western Ontario/Documents/latex-cv_orig.tex"
-  word_document: default
   html_document:
     df_print: paged
+  word_document: default
+  pdf_document: 
+    template: "C:/Users/Clara/OneDrive - The University of Western Ontario/Documents/latex-cv_orig.tex"
 jobtitle: Ph.D. Candidate and Data Analyst
 fontfamily: helvet
 fontsize: 10pt
